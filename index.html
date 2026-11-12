@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flowervera - Luxury Pakistani Floral Artistry, Fresh Gajray, Bridal Floral Jewelry & Hand-Poured Scented Candles. Fast Delivery in Pakistan.">
+    <title>Flowervera 🌹 | Luxury Fresh Gajray, Floral Jewelry & Scented Gifts</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <p><i class="fa-solid fa-truck-fast"></i> Complimentary Delivery across Karachi on Orders Above PKR 3,000 | 100% Freshness Guaranteed</p>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-container">
+            <!-- Mobile Toggle -->
+            <button type="button" class="mobile-toggle" id="menuToggle" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#home" class="logo">Flowervera<span>.</span></a>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search fresh gajray, candles, hampers..." aria-label="Search items">
+                <button type="button" aria-label="Submit Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            
+            <!-- Header Action Buttons -->
+            <div class="header-actions">
+                <button type="button" class="action-btn" id="openWishlist" aria-label="View Wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="badge" id="wishlistCount">0</span>
+                </button>
+                <button type="button" class="action-btn" id="openCart" aria-label="View Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="badge" id="cartCount">0</span>
+                </button>
+            </div>
+            <!-- Wishlist Drawer -->
+<div class="cart-overlay" id="wishlistOverlay"></div>
+<div class="cart-drawer" id="wishlistDrawer">
+    <div class="cart-header">
+        <h3>My Wishlist ❤️</h3>
+        <button type="button" id="closeWishlist" class="close-btn">&times;</button>
+    </div>
+    <div class="cart-items-container" id="wishlistItemsContainer">
+        <p class="empty-cart-text">Your wishlist is currently empty.</p>
+    </div>
+</div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#cat-gajray" class="nav-link">Fresh Gajray</a></li>
+                <li><a href="#cat-jewelry" class="nav-link">Floral Jewelry</a></li>
+                <li><a href="#cat-flowers" class="nav-link">Real Flowers</a></li>
+                <li><a href="#cat-candles" class="nav-link">Scented Candles & Combos</a></li>
+                <li><a href="#custom" class="nav-link">Custom Bouquets</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Wrapper -->
+    <main class="site-wrapper" id="siteWrapper">
+
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="sub-title">Handcrafted Luxury & Tradition</span>
+                <h1>Fresh Blooms, Artisanal Jewels & Scented Luxuries</h1>
+                <p>Exquisite bridal sets, traditional scented gajray, organic soy candles, and bespoke floral hampers crafted for your special moments.</p>
+                <div class="hero-btns">
+                    <a href="#products" class="btn btn-primary">Shop Gift Collection</a>
+                    <a href="#categories" class="btn btn-outline">Explore Gajray</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Categories -->
+        <section class="section categories-section" id="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Signature Categories</h2>
+                    <p>Select from our carefully curated floral artistry and luxury hampers</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card" id="cat-gajray">
+                        <div class="category-img bg-gajra"></div>
+                        <div class="category-info">
+                            <h3>Fresh Gajray</h3>
+                            <p>Hand-strung Motia, Chameli & Red Roses</p>
+                            <a href="#products" class="cat-link">View Collection <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="category-card" id="cat-jewelry">
+                        <div class="category-img bg-jewelry"></div>
+                        <div class="category-info">
+                            <h3>Floral Jewelry</h3>
+                            <p>Mayun, Mehndi & Nikkah Custom Sets</p>
+                            <a href="#products" class="cat-link">View Collection <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="category-card" id="cat-candles">
+                        <div class="category-img bg-candles"></div>
+                        <div class="category-info">
+                            <h3>Scented Candles & Combos</h3>
+                            <p>Organic Soy Candles & Gajra Gift Sets</p>
+                            <a href="#products" class="cat-link">View Collection <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="category-card" id="cat-flowers">
+                        <div class="category-img bg-bouquet"></div>
+                        <div class="category-info">
+                            <h3>Real Flower Collections</h3>
+                            <p>Single Stems, Roses & Custom Bouquets</p>
+                            <a href="#products" class="cat-link">View Collection <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Showcase -->
+        <section class="section products-section" id="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Exclusive Collection</h2>
+                    <p>Handpicked favorites for weddings, gifting, and personal celebrations</p>
+                </div>
+
+                <!-- Filter Navigation Tabs -->
+                <div class="filter-tabs" role="tablist">
+                    <button type="button" class="tab-btn active" data-filter="all">All Items</button>
+                    <button type="button" class="tab-btn" data-filter="fresh">Real Flowers</button>
+                    <button type="button" class="tab-btn" data-filter="candles">Candles & Combos</button>
+                    <button type="button" class="tab-btn" data-filter="artificial">Artificial Sets</button>
+                    <button type="button" class="tab-btn" data-filter="bouquets">Bouquets</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    
+                    <!-- Product 1 -->
+                    <div class="product-card" data-category="fresh" data-product-id="prod-1">
+                        <div class="product-badge badge-fresh">Real Fresh</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-single-rose"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Real Flowers</span>
+                            <h4>Velvet Dutch Red Rose (Single / Bulk)</h4>
+                            <p class="product-desc">Freshly plucked premium long-stem red rose. Order single or in bulk bundle.</p>
+                            
+                            <div class="option-selector">
+                                <label for="rose-qty">Quantity Option:</label>
+                                <select id="rose-qty" class="qty-select" data-price-target="#price-prod-1">
+                                    <option value="150" selected>Single Stem - PKR 150</option>
+                                    <option value="850">Half Dozen (6 Stems) - PKR 850</option>
+                                    <option value="1600">Full Dozen (12 Stems) - PKR 1,600</option>
+                                    <option value="3000">Bulk Bundle (24 Stems) - PKR 3,000</option>
+                                </select>
+                            </div>
+
+                            <div class="price-wrapper">
+                                <span class="price" id="price-prod-1">PKR 150</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-category="fresh" data-product-id="prod-2">
+                        <div class="product-badge badge-fresh">Fresh</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-1"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Bridal Collection</span>
+                            <h4>Royal Motia & Rose Gajra Set</h4>
+                            <p class="product-desc">Scented natural Motia woven with fresh red rose petals.</p>
+                            
+                            <div class="option-selector">
+                                <label for="gajra-pair">Pairs Option:</label>
+                                <select id="gajra-pair" class="qty-select" data-price-target="#price-prod-2">
+                                    <option value="1500" selected>1 Pair (2 Pieces) - PKR 1,500</option>
+                                    <option value="2800">2 Pairs (4 Pieces) - PKR 2,800</option>
+                                    <option value="6500">Bulk Event Order (10 Pieces) - PKR 6,500</option>
+                                </select>
+                            </div>
+
+                            <div class="price-wrapper">
+                                <span class="price" id="price-prod-2">PKR 1,500</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-category="candles" data-product-id="prod-3">
+                        <div class="product-badge badge-new">New</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-candle"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Scented Candles</span>
+                            <h4>Rose & Jasmine Soy Candle</h4>
+                            <p class="product-desc">Hand-poured organic soy wax infused with essential floral oils.</p>
+                            
+                            <div class="price-wrapper">
+                                <span class="price">PKR 1,800</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-category="candles" data-product-id="prod-4">
+                        <div class="product-badge badge-best">Best Seller</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-combo"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Gift Hampers</span>
+                            <h4>Royal Bloom Gajra & Candle Combo</h4>
+                            <p class="product-desc">Includes 1 Pair Fresh Motia Gajray + 1 Scented Candle in a velvet gift box.</p>
+                            
+                            <div class="price-wrapper">
+                                <span class="price">PKR 3,500</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card" data-category="fresh" data-product-id="prod-5">
+                        <div class="product-badge badge-fresh">Real Fresh</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-veni"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Hair Accessories</span>
+                            <h4>Fresh Mogra Bridal Hair Veni</h4>
+                            <p class="product-desc">Intricately woven fresh white Jasmine hair accessory for brides.</p>
+                            
+                            <div class="price-wrapper">
+                                <span class="price">PKR 1,200</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-card" data-category="artificial" data-product-id="prod-6">
+                        <div class="product-badge badge-art">Artificial</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-2"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Mayun / Mehndi</span>
+                            <h4>Velvet Crimson Floral Jewelry</h4>
+                            <p class="product-desc">Reusable handcrafted bridal necklace, earrings & maang tikka.</p>
+                            
+                            <div class="price-wrapper">
+                                <span class="price">PKR 3,200</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-card" data-category="bouquets" data-product-id="prod-7">
+                        <div class="product-badge badge-best">Best Seller</div>
+                        <button type="button" class="wishlist-btn" aria-label="Add to Wishlist"><i class="fa-regular fa-heart"></i></button>
+                        <div class="product-img bg-prod-3"></div>
+                        <div class="product-details">
+                            <span class="prod-cat">Bouquets</span>
+                            <h4>Velvet Rose & Baby's Breath Classic</h4>
+                            <p class="product-desc">24 Fresh red roses wrapped in signature matte black paper.</p>
+                            
+                            <div class="price-wrapper">
+                                <span class="price">PKR 4,000</span>
+                            </div>
+                            <button type="button" class="btn btn-sm btn-block add-to-cart-btn"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Order Banner -->
+        <section class="custom-banner" id="custom">
+            <div class="container">
+                <div class="banner-content">
+                    <span class="banner-tag">Custom Crafts</span>
+                    <h2>Bespoke Floral Designs & Bulk Event Orders</h2>
+                    <p>Have a custom vision or bulk event requirement? Share your preferred colors, floral choices, and hamper details for tailored bridal sets or event decorations.</p>
+                    <a href="#contact" class="btn btn-primary">Request Custom Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Loved By Our Clients</h2>
+                    <p>See what brides and gift givers say about our fresh blooms and prompt delivery</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"The fresh Motia gajray for my Mayo event arrived super fresh and smelled divine! Truly elevated my bridal look."</p>
+                        <div class="client-info">
+                            <strong>Ayesha K.</strong>
+                            <span>Karachi</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"Ordered the Royal Bloom Candle Combo for a friend's anniversary. The packaging and scent exceeded expectations!"</p>
+                        <div class="client-info">
+                            <strong>Sana M.</strong>
+                            <span>Lahore</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p>"Fast delivery and supreme quality rose bouquets. Flowervera has become my default choice for every occasion."</p>
+                        <div class="client-info">
+                            <strong>Zainab R.</strong>
+                            <span>Islamabad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Trust Bar -->
+        <section class="features-bar">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-seedling"></i>
+                        <h4>Farm Fresh Quality</h4>
+                        <p>Sourced daily for maximum scent & freshness</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-gem"></i>
+                        <h4>Handcrafted Perfection</h4>
+                        <p>Intricate detail in every single strand</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <h4>Timely Delivery</h4>
+                        <p>On-time guaranteed delivery for event slots</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <h4>100% Satisfaction</h4>
+                        <p>Freshness replacement guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact & Ordering</h2>
+                    <p>Get in touch for event bookings and custom gift inquiries</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Visit Our Studio</h3>
+                        <p>Experience the aroma and selection in person, or reach out directly through digital channels.</p>
+                        <ul class="contact-list">
+                            <li><i class="fa-solid fa-location-dot"></i> DHA Phase 6, Karachi, Pakistan</li>
+                            <li><i class="fa-solid fa-phone"></i> <a href="tel:+923001234567">+92 300 1234567</a></li>
+                            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:concierge@flowervera.pk">concierge@flowervera.pk</a></li>
+                            <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/923001234567" target="_blank" rel="noopener">+92 300 1234567</a></li>
+                        </ul>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone / WhatsApp Number</label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="03XXXXXXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" name="email" placeholder="Your Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message / Details</label>
+                                <textarea id="contact-message" name="message" rows="4" placeholder="Your Message or Custom/Bulk Order Details..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Send Message / Request Order</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#home" class="footer-logo">Flowervera<span>.</span></a>
+                    <p>Curating authentic Pakistani floral heritage through luxury gajray, handcrafted jewelry, scented candles, and artisanal bouquets.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cat-gajray">Signature Gajray</a></li>
+                        <li><a href="#cat-candles">Scented Candles & Combos</a></li>
+                        <li><a href="#custom">Custom & Bulk Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#care">Care Instructions</a></li>
+                        <li><a href="#shipping">Delivery & Shipping</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Our Journey</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Flowervera. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART SIDEBAR DRAWER -->
+    <div class="cart-drawer-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-header">
+            <h3>Your Shopping Cart (<span id="cartDrawerCount">0</span>)</h3>
+            <button type="button" class="close-btn" id="closeCart" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-body" id="cartItemsContainer">
+            <!-- Empty Cart Message Placeholder -->
+            <p class="empty-cart-text">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <strong id="cartSubtotal">PKR 0</strong>
+            </div>
+            <button type="button" class="btn btn-primary btn-block">Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- JavaScript File -->
+    <script src="Main.js"></script>
+</body>
+</html>
